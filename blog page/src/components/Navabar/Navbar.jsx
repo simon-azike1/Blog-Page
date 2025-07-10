@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './navbar.css';
 import Logo from '@/assets/Images/simon.jpg';
 
@@ -6,12 +7,12 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(prev =>!prev);
+    setIsMobileMenuOpen(prev => !prev);
   };
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
-  }
+  };
 
   return (
     <header className="navbar-header">
@@ -22,17 +23,16 @@ const Navbar = () => {
 
       <nav className="navbar">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Tours</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">About</a></li>
-
-         
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/tours">Tours</Link></li>
+          <li><Link to="/blog">Blog</Link></li>
+          <li><Link to="/about">About</Link></li>
         </ul>
-        <button className="sign-up"  onClick={closeMobileMenu}>
-          <a href="#">Sign Up</a>
-        </button>
       </nav>
+
+      <Link to="/signup" className="sign-up" onClick={closeMobileMenu}>
+        Sign Up
+      </Link>
 
       <button className="menu-toggle" onClick={toggleMobileMenu}>
         <span className="bar"></span>
@@ -42,13 +42,14 @@ const Navbar = () => {
 
       <nav className={`mobile-nav ${isMobileMenuOpen ? 'active' : ''}`}>
         <ul>
-          <li><a href="#" onClick={closeMobileMenu} >Home</a></li>
-          <li><a href="#" onClick={closeMobileMenu} >Tour</a></li>
-          <li><a href="#" onClick={closeMobileMenu} >Blog</a></li>
-          <li><a href="#" onClick={closeMobileMenu} >About</a></li>
-          
+          <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
+          <li><Link to="/tours" onClick={closeMobileMenu}>Tour</Link></li>
+          <li><Link to="/blog" onClick={closeMobileMenu}>Blog</Link></li>
+          <li><Link to="/about" onClick={closeMobileMenu}>About</Link></li>
         </ul>
-        <a href="#" className="sign-up" onClick={closeMobileMenu}>Sign Up</a>
+        <Link to="/signup" className="sign-up" onClick={closeMobileMenu}>
+          Sign Up
+        </Link>
       </nav>
     </header>
   );
