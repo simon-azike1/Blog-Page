@@ -189,4 +189,9 @@ body {
   .sign-up{
     display: none;
   }
+
+
+   .logo{
+      display: none;
+    }
 }
