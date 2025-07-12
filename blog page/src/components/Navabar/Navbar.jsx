@@ -17,10 +17,14 @@ const Navbar = () => {
   return (
     <header className="navbar-header">
       <div className="logo">
-        <img src={Logo} alt="Logo not found" />
-        <h1>Blog</h1>
-      </div>
+      <Link to = "/">
+      <img src={Logo} alt="Logo not found" />
+      </Link> 
+      <Link to="/" style={{textDecoration:"none"}}>
+       <h1><i>SamzkTech blog</i> </h1>
+      </Link>
 
+      </div>
       <nav className="navbar">
         <ul>
           <li><Link to="/">Home</Link></li>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* Reset default browser styles */
 * {
     margin: 0;
@@ -9,6 +11,7 @@ body {
   background: url("https://cdn.pixabay.com/photo/2016/03/26/22/48/tree-1281680_1280.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed; 
+  font-family: 'Poppins', Courier, monospace;
 
 }
 
@@ -29,7 +32,7 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
+    height: 60vh; 
 }
 
 /* Content container inside hero section */
@@ -67,7 +70,107 @@ body::before {
 }
 
 
+/* Lower bar styling */
 
+.lower-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding: 10px;
+    width: 50%;
+    margin:10px;
+    background-color: #ffffff;
+    border-radius: 50px;
+}
+
+.btn{
+    border:none;
+    padding: 5px;
+    background-color: #3ba1c8;
+    border-radius: 49px;
+    width: 20%;
+}
+
+.btn > i {
+    margin: 10px ;
+}
+
+
+.btn:hover{
+    cursor: pointer;
+    background-color: orange;
+    transition: transform .2s ease;
+}
+
+.list-nav{
+    display: block;
+    text-decoration: none;
+    margin: 10px;
+
+}
+
+.list-date{
+    display: flex;
+}
+
+.list-date > li{
+list-style-type: none;
+}
+
+.list-date > li {
+    margin: 10px;
+}
+.list-date > .date p{
+color: #949494;
+}
+.list-date > .date h5{
+color: #090909;
+}
+
+.search{
+    display: flex;
+    flex-direction:   column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding:10px;
+}
+
+
+/* ================================
+    Mobile & Tablet Responsive
+   ================================= */
+@media screen and (max-width: 768px) {
+  .lower-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 20px;
+    padding: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .list-date {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .list-date > li {
+    margin: 5px 0;
+  }
+
+  .search {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+  }
+}
 
 
 /* Responsive styles for smaller screens */
@@ -91,7 +194,10 @@ body::before {
     body {
         background-attachment: scroll;
     }
+
+    
 }
+
 
 
 
@@ -100,4 +206,5 @@ body::before {
   body {
     background-attachment: scroll; 
   }
+
 }
