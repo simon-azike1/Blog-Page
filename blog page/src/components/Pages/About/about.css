@@ -1,35 +1,60 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* About Page Styles */
+.about-hero {
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-
-.about{
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    height: 100vh;
-    /* background-color: red; */
-}
 .container{
-    /* background-color: orange; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self:center;
-    margin: auto;
-    padding: 10px;
-    text-align: center;
+  background: none;
 }
 
-.container > h1 {
-    color: white;
-    font-size: 4em;
-
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  margin: 3rem 0;
 }
 
-.container > p  {
-    color: white;
-    font-size: 20px;
+.para-text{
+  color: white;
+}
+
+.profile-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: fit-content;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.skill-tag {
+  background: #e2e8f0;
+  color: #4a5568;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
 }

@@ -1,63 +1,57 @@
-import { useState } from 'react'
-import Navbar from '../Navabar/Navbar'
+import React from "react"
 import './home.css'
+import Footer from "../Footer/Footer"
 
-function App() {
- 
-
+export default function HomePage() {
   return (
-    <>
-<section className="blog">
-<div className="hero-section">
-<div className="content-container">
-  <h1>
-    LET'S EXPLORE  <br /> THE WORKD <hr  className='under-line'/>
-  </h1>
-  <p>
-    Book trips and explor new destination with ease from anywhere
-  </p>
-</div>
-</div>
- </section>
+   
+      <div className="page">
+         <section className="hero">
+          <div className="container">
+            <h1>Welcome to Simon Azike</h1>
+            <p>Your gateway to the future of web development and digital innovation</p>
+            <button className="btn btn-primary">Get Started</button>
+          </div>
+        </section>
 
-<section className="search">
-  <div className="lower-bar">
-  <nav className="list-nav">
-    <ul className='list-date'>
-      <li className="date">
-      <p>Destination</p>
-      <h5>
-        Bail
-      </h5>
-      </li>
-      <li className="date">
-      <p>Check in</p>
-      <h5>
-      Dec 28, 2024
-      </h5>
-      </li>
-      <li className="date">
-      <p>Check out</p>
-      <h5>
-      Jan 3, 2025
-      </h5>
-      </li>
-      <li className="date">
-      <p>Guests</p>
-      <h5>
-       3 Guests
-      </h5>
-      </li>
-    </ul>
-  </nav>
-  <button className="btn">
-    <i class="fa-solid fa-magnifying-glass-location"></i>
-     Search
-  </button>
-</div>
-</section>
-  </>
+        <section className="container">
+          <div className="features">
+            <div className="feature-card">
+              <h3>🚀 Modern Development</h3>
+              <p>
+                Stay ahead with the latest technologies and frameworks. Learn React, Next.js, and cutting-edge web
+                development practices.
+              </p>
+            </div>
+            <div className="feature-card">
+              <h3>🎨 Creative Design</h3>
+              <p>
+                Explore the intersection of design and technology. Create beautiful, functional interfaces that users
+                love.
+              </p>
+            </div>
+            <div className="feature-card">
+              <h3>🌐 Web 3.0 Ready</h3>
+              <p>Dive into the decentralized web. Learn about blockchain, NFTs, and the future of digital ownership.</p>
+            </div>
+            <div className="feature-card">
+              <h3>🌐 Web 3.0 Ready</h3>
+              <p>Dive into the decentralized web. Learn about blockchain, NFTs, and the future of digital ownership.</p>
+            </div>
+          </div>
+
+          <section style={{ textAlign: "center", margin: "4rem 0" }}>
+            <h2 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>Ready to Start Your Journey?</h2>
+            <p style={{ fontSize: "1.25rem", color: "#f8fafeff", marginBottom: "2rem" }}>
+              Join thousands of developers and designers who are building the future
+            </p>
+            <div style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
+              <button className="btn btn-primary">View Blog</button>
+              <button className="btn btn-ghost">Take a Tour</button>
+            </div>
+          </section>
+        </section>
+      </div>
+    
   )
 }
-
-export default App

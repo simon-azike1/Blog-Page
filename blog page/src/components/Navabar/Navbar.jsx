@@ -21,7 +21,7 @@ const Navbar = () => {
       <img src={Logo} alt="Logo not found" />
       </Link> 
       <Link to="/" style={{textDecoration:"none"}}>
-       <h1><i>SamzkTech blog</i> </h1>
+       <h1><i>Simon.A</i> </h1>
       </Link>
 
       </div>
